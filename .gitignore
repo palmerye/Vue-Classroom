@@ -1,0 +1,7 @@
+.DS_Store
+
+# 忽略所有依赖，本地起工程需 install
+node_modules
+
+# 忽略所有日志文件
+*.[log]
