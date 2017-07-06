@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello Vue.js</title>
+	<script src="https://unpkg.com/vue"></script>
+	<style type="text/css">
+		p {
+			font-size: 40px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<p>{{ message }}</p>
+	</div>
+	<script type="text/javascript">
+		var HK = new Vue({
+			el: '#app',
+			data: {
+				message: 'Hello Vue.js!'
+			}
+		})
+	</script>
+</body>
+</html>
