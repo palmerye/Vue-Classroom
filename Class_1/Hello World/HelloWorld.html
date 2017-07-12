@@ -4,7 +4,7 @@
 	<title>Hello Vue.js</title>
 	<script src="https://unpkg.com/vue"></script>
 	<style type="text/css">
-		p {
+		body {
 			font-size: 40px;
 			text-align: center;
 		}
@@ -13,6 +13,7 @@
 <body>
 	<div id="app">
 		<p>{{ message }}</p>
+		<input v-model="message">
 	</div>
 	<script type="text/javascript">
 		var HK = new Vue({
