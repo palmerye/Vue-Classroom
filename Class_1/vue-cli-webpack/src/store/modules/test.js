@@ -1,0 +1,47 @@
+import { testApi } from '../../api'
+import * as types from '../mutation-types'
+
+const state = {
+  testData: 'testVuex'
+}
+
+// getters
+const getters = {
+  testDataGet (state) {
+    return state.testData
+  }
+}
+
+// actions
+const actions = {
+  gettestData ({ commit }) {
+    testApi()
+      .then(res => {
+        commit(types.TESTGET_SUCCESS, res.data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  },
+  setTest ({commit}, data) {
+    commit(types.TESTSET_SUCCESS, data)
+  }
+}
+
+// mutations
+const mutations = {
+  [types.TESTGET_SUCCESS] (state, { data }) {
+    state.testData = data
+  },
+  [types.TESTSET_SUCCESS] (state, data) {
+    console.log(data)
+    state.testData = data
+  }
+}
+
+export default {
+  state,
+  getters,
+  actions,
+  mutations
+}
